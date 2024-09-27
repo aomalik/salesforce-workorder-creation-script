@@ -40,5 +40,5 @@ This script uses createSalesforceWorkOrder to:
 
 1. Run script:
    ```
-   npm index.js
+   node index.js
    ```
