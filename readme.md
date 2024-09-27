@@ -1,4 +1,11 @@
-This project is a simple example of how to create a work order and a service appointment in Salesforce using the Salesforce API.
+#Salesforce Workorder and Service Appointment Generator 
+
+This project is a simple example of how to use Salesforce API to create a work order and a service appointment.
+This script uses createSalesforceWorkOrder to:
+      - Fetch random IDs for Account, Contact, and WorkType from a Salesforce Instance.
+      - Create a new Work Order with the fetched IDs and additional details.
+      - Retrieve and log the status of the created Work Order.
+      - Create a Service Appointment linked to the Work Order.
 
 ## Prerequisites
 
@@ -22,9 +29,11 @@ This project is a simple example of how to create a work order and a service app
 
 1. Create a `.env` file in the root of the project and add the following environment variables:
    ```
-   INSTANCE_URL=https://your-instance.salesforce.com
-   CONSUMER_KEY=your-consumer-key
-   CONSUMER_SECRET=your-consumer-secret
+
+   CLIENT_ID=your_client_id
+   CLIENT_SECRET=your_client_secret
+   AUTH_URL=https://login.salesforce.com
+   INSTANCE_URL=https://your_instance.salesforce.com
    ```
 
 ## Usage
