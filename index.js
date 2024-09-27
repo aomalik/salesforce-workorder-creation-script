@@ -141,15 +141,16 @@ async function createSalesforceWorkOrder(accessToken) {
 }
 
 // Main function
-function main() {
-    getSalesforceAuthToken().then(accessToken => {
+async function main() {
+    try {
+        const accessToken = await getSalesforceAuthToken();
         if (accessToken) {
             console.log('Access token:', accessToken);
-            createSalesforceWorkOrder(accessToken);
+            await createSalesforceWorkOrder(accessToken);
         }
-    }).catch(error => {
+    } catch (error) {
         console.error('Error getting access token', error);
-    });
+    }
 }
 
 main();
