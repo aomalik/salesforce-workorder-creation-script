@@ -9,7 +9,7 @@ This project is a simple example of how to create a work order and a service app
 
 1. Clone the repository:
    ```
-   git clone https://github.com/your-username/salesforce-work-order-service-appointment.git
+   git clone https://github.com/aomalik/salesforce-workorder-creation-script.git
    ```
 
 2. Install dependencies:
