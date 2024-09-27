@@ -14,7 +14,7 @@ This project is a simple example of how to create a work order and a service app
 
 2. Install dependencies:
    ```
-   cd salesforce-work-order-service-appointment
+   cd salesforce-workorder-creation-script
    npm install
    ```
 
