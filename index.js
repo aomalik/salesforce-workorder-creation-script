@@ -11,6 +11,7 @@ async function main() {
         const accessToken = await getSalesforceAuthToken();
         if (accessToken) {
             // Menu for selecting flow
+            console.log("Access token received", accessToken);
             console.log('Select flow:');
             console.log('1. Work Order Ready Flow');
             console.log('2. Service Appointment Ready Flow');

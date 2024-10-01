@@ -35,12 +35,12 @@ async function createServiceAppointment(workOrderId, accessToken) {
         const serviceAppointmentData = {
             "Subject": "Routine HVAC Maintenance",
             "ParentRecordId": workOrderId,
-            "Status": "New",
+
             "Duration": 120,
             "DurationType": "Minutes",
             "Latitude": 40.712776,
             "Longitude": -74.005974,
-            "Status": "New"
+            "Status": "On Hold"
         };
 
         const response = await axios.post(
