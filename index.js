@@ -13,9 +13,9 @@ async function main() {
             // Menu for selecting flow
             console.log("Access token received", accessToken);
             console.log('Select flow:');
-            console.log('1. Work Order Ready Flow');
-            console.log('2. Service Appointment Ready Flow');
-            console.log('3. Work Order Done Flow');
+            console.log('1. Work Order Ready Platform Event: This will create a Work Order, a Service Appointment, and 2 Work Order Line Items.');
+            console.log('2. Service Appointment Ready Platform Event: This will update the Service Appointment status to "Dispatched".');
+            console.log('3. Execute Work Order Done Platform Event: This will update the Work Order status to "Done" (Doesnt work yet.');
             
             const rl = readline.createInterface({
                 input: process.stdin,
