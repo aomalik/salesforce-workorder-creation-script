@@ -1,5 +1,5 @@
 const axios = require('axios');
-const { getRandomSalesforceId, getWorkOrderStatus, createServiceAppointment, updateServiceAppointment } = require('../utils/salesforceUtils');
+const { getRandomSalesforceId, getWorkOrderStatus, createServiceAppointment, updateServiceAppointment, createWorkOrderLineItem } = require('../utils/salesforceUtils');
 
 async function workOrderReadyFlow(accessToken) {
     try {
@@ -52,8 +52,16 @@ async function workOrderReadyFlow(accessToken) {
         console.log("Updating the Service Appointment with ID:", serviceAppointment.id);
         await updateServiceAppointment(serviceAppointment.id, accessToken);
         console.log('Service Appointment updated successfully. ID:', serviceAppointment.id);
+        //Now adding Work Order Line Items for the Work Order
+        const workOrderLineItem1 = await createWorkOrderLineItem(workOrderId, accessToken);
+        console.log('Work Order Line Item 1 created successfully. ID:', workOrderLineItem1.id);
 
-        console.log("Work Order Ready Flow completed successfully.");
+        const workOrderLineItem2 = await createWorkOrderLineItem(workOrderId, accessToken);
+        console.log('Work Order Line Item 2 created successfully. ID:', workOrderLineItem2.id);
+
+
+
+        console.log("Work Order Ready Platform Event triggered");
         return response.data;
     } catch (error) {
         console.error('Error occurred during Work Order Ready Flow:', error.message);

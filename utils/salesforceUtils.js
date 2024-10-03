@@ -60,6 +60,33 @@ async function createServiceAppointment(workOrderId, accessToken) {
         throw new Error(`Failed to create service appointment: ${error.message}`);
     }
 }
+async function createWorkOrderLineItem(workOrderId, accessToken) {
+    try {
+        const instanceUrl = process.env.INSTANCE_URL;
+        const workOrderLineItemData = {
+            "WorkOrderId": workOrderId,
+            "Description": `Line item description with work order id ${workOrderId}`,
+            "Status": "New"
+        };
+
+        const response = await axios.post(
+            `${instanceUrl}/services/data/v61.0/sobjects/WorkOrderLineItem`,
+            workOrderLineItemData,
+            {
+                headers: {
+                    'Authorization': `Bearer ${accessToken}`,
+                    'Content-Type': 'application/json'
+                }
+            }
+        );
+        console.log('Work order line item created:', response.data);
+        return response.data;
+    } catch (error) {
+        console.error('Error creating work order line item:', error.message);
+        throw new Error(`Failed to create work order line item: ${error.message}`);
+    }
+}
+
 
 async function updateServiceAppointment(serviceAppointmentId, accessToken) {
     try {
@@ -91,5 +118,6 @@ module.exports = {
     getRandomSalesforceId,
     getWorkOrderStatus,
     createServiceAppointment,
-    updateServiceAppointment
+    updateServiceAppointment,
+    createWorkOrderLineItem
 };

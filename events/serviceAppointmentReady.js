@@ -70,6 +70,7 @@ async function serviceAppointmentReadyFlow(accessToken) {
                 );
 
                 console.log('Service appointment status updated to "Dispatched":', statusUpdateResponse.data);
+                console.log("Service Appointment Ready Platform event triggered");
             } catch (error) {
                 console.error('Error updating service appointment:', error.message);
                 throw new Error(`Failed to update service appointment: ${error.message}`);
