@@ -66,7 +66,8 @@ async function createWorkOrderLineItem(workOrderId, accessToken) {
         const workOrderLineItemData = {
             "WorkOrderId": workOrderId,
             "Description": `Line item description with work order id ${workOrderId}`,
-            "Status": "New"
+            "Status": "New",
+            "AssetId": "02iWE000001ru6jYAA" 
         };
 
         const response = await axios.post(
