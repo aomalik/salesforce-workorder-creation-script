@@ -48,7 +48,7 @@ async function main() {
                         const assigneeIds1 = ["adeel.malik@saasfactory.vc"];
                         const customerName1 = "Some Customer";
                         const jobLocation1 = "Some Location";
-                        const workOrderNumber1 = "Some Workorder";
+                        const workOrderNumber1 = "0WOWE000002friL4AQ";
                         const label1 = "A human-friendly identifier";
                         const tags1 = ["tag1", "tag2"];
                         const integrationEntityNamespace1 = "AtLeast10Characters";
@@ -71,8 +71,8 @@ async function main() {
                         console.log('First XOI Job Result:', xoiJob1);
 
                         // Create second XOI job
-                        const xoiJob2 = await createXoiJob(xoiAuthToken, assigneeIds2, customerName2, jobLocation2, workOrderNumber1, label2, tags2, integrationEntityNamespace2, integrationEntityId2, internalNoteText2);
-                        console.log('Second XOI Job Result:', xoiJob2);
+                        //const xoiJob2 = await createXoiJob(xoiAuthToken, assigneeIds2, customerName2, jobLocation2, workOrderNumber1, label2, tags2, integrationEntityNamespace2, integrationEntityId2, internalNoteText2);
+                        //console.log('Second XOI Job Result:', xoiJob2);
 
                         break;
                     default:
