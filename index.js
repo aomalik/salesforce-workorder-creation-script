@@ -18,7 +18,7 @@ async function main() {
             console.log('1. Work Order Ready Platform Event: This will create a Work Order, a Service Appointment, and 2 Work Order Line Items.');
             console.log('2. Service Appointment Ready Platform Event: This will update the Service Appointment status to "Dispatched".');
             console.log('3. Execute Work Order Done Platform Event: This will update the Work Order status to "Done" (Doesnt work yet.');
-            console.log('4. Create two XOi Jobs. Remember to update workordernumber in index.js (Use work order number from step 1)');
+            console.log('4. Create two XOi Jobs. Remember to update workordernumber in index.js (Use work order number from step 1 and update externalId in index.js)');
             
             const rl = readline.createInterface({
                 input: process.stdin,
