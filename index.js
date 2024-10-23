@@ -48,8 +48,8 @@ async function main() {
                         const assigneeIds1 = ["adeel.malik@saasfactory.vc"];
                         const customerName1 = "Some Customer";
                         const jobLocation1 = "Some Location";
-                        const workOrderNumber1 = "6541832";
-                        const externalId = "0WOWE000002nPkH4AU";
+                        const workOrderNumber1 = "6541832abcc";
+                        const externalId = "0WOWE000002pjl74AA";
                         const label1 = "A human-friendly identifier";
                         const tags1 = ["tag1", "tag2"];
                         const integrationEntityNamespace1 = "AtLeast10Characters";

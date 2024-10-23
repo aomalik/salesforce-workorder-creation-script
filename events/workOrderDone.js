@@ -29,13 +29,31 @@ async function workOrderDoneFlow(accessToken) {
             //console.error('Error response datas:', error.response?.data); // Log the response data if available
             throw new Error(`Failed to update work order status: ${error.message}`);
         }
+        const rl = require('readline').createInterface({
+            input: process.stdin,
+            output: process.stdout
+        });
 
+        await new Promise((resolve) => {
+            rl.question('Enter Work Order ID (or press 0 to use the default work order): ', (inputWorkOrderId) => {
+                if (inputWorkOrderId !== '0') {
+                    workOrderId = inputWorkOrderId;
+                }
+                else{
+                    console.log('Found work order with status "New" and service appointment attached with ID:', workOrderId);
+                    
+                }
+                rl.close();
+                
+                resolve();
+            });
+        });
 
-        console.log('Found work order with status "New" and service appointment attached with ID:', workOrderId);
-
+        console.log('Using work order id:', workOrderId);
+        
         // Update the status of the found work order to 'Done'
         const updateData = {
-            "Status": "Done"
+            "Status": "Completed"
         };
 
         const updateResponse = await axios.patch(
