@@ -67,7 +67,7 @@ async function workOrderDoneFlow(accessToken) {
             }
         );
 
-        console.log('Work order status updated to "Done":', updateResponse.data);
+        console.log(`Work order status updated to "${updateData.Status}":`, updateResponse.data);
     } catch (error) {
         console.error('Error updating work order status:', error.message);
         throw new Error(`Failed to update work order statushere: ${error.message}`);
