@@ -46,7 +46,7 @@ async function main() {
                             console.log('XOI Auth Token:', xoiAuthToken);
 
                             // First set of variables
-                            const assigneeIds1 = ["adeel.malik@saasfactory.vc"];
+                            const assigneeIds1 = ["emmanuel.rivera@trane.com.invalid"];
                             const customerName1 = "Some Customer";
                             const jobLocation1 = "Some Location";
                             const workOrderNumber1 = "6541832abcdaa";
@@ -58,7 +58,7 @@ async function main() {
                             const internalNoteText1 = "A note about the job.";
 
                             // Second set of variables
-                            const assigneeIds2 = ["adeel.malik@saasfactory.vc"];
+                            const assigneeIds2 = ["emmanuel.rivera@trane.com.invalid"];
                             const customerName2 = "Another Customer";
                             const jobLocation2 = "Another Location";
                             //const workOrderNumber2 = "Another Workorder";
