@@ -27,14 +27,7 @@ This script uses createSalesforceWorkOrder to:
 
 ## Configuration
 
-1. Create a `.env` file in the root of the project and add the following environment variables:
-   ```
-
-   CLIENT_ID=your_client_id
-   CLIENT_SECRET=your_client_secret
-   AUTH_URL=https://login.salesforce.com
-   INSTANCE_URL=https://your_instance.salesforce.com
-   ```
+1. Create a `.env` file in the root of the project and add the env variables from `.env.sample`:
 
 ## Usage
 
